@@ -7,6 +7,10 @@ import java.util.Scanner;
 public class Lab2P2_AkeemIeong {
     static Scanner read=new Scanner(System.in);
     static Usuario use=new Usuario();
+    static Pinturas pin=new Pinturas();
+    static Esculturas escul=new Esculturas();
+    static Fotografias fotos=new Fotografias();
+    static Escritos escri=new Escritos();
     static ArrayList<Usuario> users=new ArrayList();
     static ArrayList<Pinturas> pinturas=new ArrayList();
     static ArrayList<Esculturas> escultura=new ArrayList();
@@ -155,7 +159,14 @@ public class Lab2P2_AkeemIeong {
                 int mes=Integer.parseInt(arrfecha[1]);
                 int ano=Integer.parseInt(arrfecha[2]);
                 Date fechapre=new Date(ano, mes, dia);
-                boolean ex;
+                System.out.println("Fecha de adquisicion ingrese dd/mm/yyyy: ");
+                String fecha3=read.next();
+                String []arrfecha3=fecha3.split("/");
+                int dia3=Integer.parseInt(arrfecha3[0]);
+                int mes3=Integer.parseInt(arrfecha3[1]);
+                int ano3=Integer.parseInt(arrfecha3[2]);
+                Date fechapre=new Date(ano, mes, dia);
+                boolean ex=false;
                 System.out.println("Ingrese si esta en exibicion s/n: ");
                 char a=read.next().charAt(0);
                 if(a=='s'){
@@ -163,8 +174,11 @@ public class Lab2P2_AkeemIeong {
                 }else
                     if(a=='n'){
                         ex=false;
-                        
                     }
+                pin.setAutor(auto);
+                pin.setDechaad(fechapre);
+                pin.setEsta(ex);
+                pin.setFechapre(fechapre);
                 break;
             case 2:
                 System.out.println("Ingrese el nombre del escultor: ");
@@ -201,34 +215,20 @@ public class Lab2P2_AkeemIeong {
                 System.out.println("Ingrese el alto de la foto :");
                 int alto=read.nextInt();
                 System.out.println("Ingrese la resolucion de la foto: ");
-                String res=
-                System.out.println("Ingrese el color: ");
-                
-
+                String res=read.next();
+                System.out.println("Ingrese el color B/N: ");
+                String col=read.next();
+                String dimen=largo+"cm X "+alto+"cm";
                 break;
             case 4:
-                System.out.println("Ingrese el nombre de la pintura: ");
-                String pint=read.next();
-                System.out.println("Ingrese el nombre del autor :");
-                String auto=read.next();
-                System.out.println("Fecha de presentacion ingrese dd/mm/yyyy: ");
-                String fecha=read.next();
-                String []arrfecha=fecha.split("/");
-                int dia=Integer.parseInt(arrfecha[0]);
-                int mes=Integer.parseInt(arrfecha[1]);
-                int ano=Integer.parseInt(arrfecha[2]);
-                Date fechapre=new Date(ano, mes, dia);
-                boolean ex;
-                System.out.println("Ingrese si esta en exibicion s/n: ");
-                char a=read.next().charAt(0);
-                if(a=='s'){
-                    ex=true;
-                }else
-                    if(a=='n'){
-                        ex=false;
-                        
-                    }
-
+                System.out.println("Ingrese la cantidad de total de palabras: ");
+                int cantpal=read.nextInt();
+                System.out.println("Ingrese la epoca: ");
+                String epoca=read.next();
+                System.out.println("Ingrese el genero literario: ");
+                String gen=read.next();
+                System.out.println("Ingrese el  nombre del autor: ");
+                String autor=read.next();
                 break;
                                         }
     }
