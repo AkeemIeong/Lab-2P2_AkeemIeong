@@ -165,7 +165,7 @@ public class Lab2P2_AkeemIeong {
                 int dia3=Integer.parseInt(arrfecha3[0]);
                 int mes3=Integer.parseInt(arrfecha3[1]);
                 int ano3=Integer.parseInt(arrfecha3[2]);
-                Date fechapre=new Date(ano, mes, dia);
+                Date fechapre3=new Date(ano3, mes3, dia3);
                 boolean ex=false;
                 System.out.println("Ingrese si esta en exibicion s/n: ");
                 char a=read.next().charAt(0);
@@ -176,26 +176,23 @@ public class Lab2P2_AkeemIeong {
                         ex=false;
                     }
                 pin.setAutor(auto);
-                pin.setDechaad(fechapre);
+                pin.setDechaad(fechapre3);
                 pin.setEsta(ex);
                 pin.setFechapre(fechapre);
+                pin.setNombre(pint);
+                pinturas.add(new Pinturas(pint, auto,fechapre,fechapre3, ex));
                 break;
             case 2:
                 System.out.println("Ingrese el nombre del escultor: ");
                 String escultor=read.next();
                 System.out.println("Ingrese el material :");
                 String mat=read.next();
-                System.out.println("Fecha de inicio ingrese dd/mm/yyyy: ");
-                String fechacom=read.next();
-                String []arrfecha1=fechacom.split("/");
-                int dia2=Integer.parseInt(arrfecha1[0]);
-                int mes2=Integer.parseInt(arrfecha1[1]);
-                int ano2=Integer.parseInt(arrfecha1[2]);
-                Date feccom=new Date(ano2, mes2, dia2);
+                System.out.println("Ingrese el ano de inicio: ");
+                int ano2=read.nextInt();
                 System.out.println("1<-Arqueologia");
                 System.out.println("2<-Artes");
                 System.out.println("3<-Historia");
-                String place;
+                String place="";
                 int lugar=read.nextInt();
                 switch(lugar){
                     case 1:
@@ -208,6 +205,11 @@ public class Lab2P2_AkeemIeong {
                         place="Historia";
                         break;
                 }
+                escul.setAno(ano2);
+                escul.setDepar(place);
+                escul.setMaterial(mat);
+                escul.setNombre(escultor);
+                escultura.add(new Esculturas(escultor, mat, ano2, place));
                 break;
             case 3:
                 System.out.println("Ingrese el largo de la foto: ");
@@ -219,6 +221,7 @@ public class Lab2P2_AkeemIeong {
                 System.out.println("Ingrese el color B/N: ");
                 String col=read.next();
                 String dimen=largo+"cm X "+alto+"cm";
+                
                 break;
             case 4:
                 System.out.println("Ingrese la cantidad de total de palabras: ");
