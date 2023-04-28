@@ -25,6 +25,7 @@ public class Lab2P2_AkeemIeong {
             opuser=read.nextInt();
             String user,contrasena,sn;
             boolean ad=false;
+            String res="n";
             
             int op,op2;
             switch(opuser){
@@ -169,8 +170,9 @@ public class Lab2P2_AkeemIeong {
                     }
                     
                     break;
+                    
             }
-        
+                
         }while (opuser!=5);
     }
     public static void add(int op){
