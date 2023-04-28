@@ -83,6 +83,9 @@ public class Lab2P2_AkeemIeong {
                                         if(op2==1){
                                             add(1);
                                         }
+                                        if(op2==2){
+                                            imprimir(1);
+                                        }
                                         break;
                                     case 2:
                                         System.out.println("1<-Crear");
@@ -92,6 +95,9 @@ public class Lab2P2_AkeemIeong {
                                         op2=read.nextInt();
                                         if(op2==1){
                                             add(2);
+                                        }
+                                        if(op2==2){
+                                            imprimir(2);
                                         }
                                         break;
                                     case 3:
@@ -103,6 +109,9 @@ public class Lab2P2_AkeemIeong {
                                         if(op2==1){
                                             add(3);
                                         }
+                                        if(op2==2){
+                                            imprimir(3);
+                                        }
                                         break;
                                     case 4:
                                         System.out.println("1<-Crear");
@@ -112,6 +121,9 @@ public class Lab2P2_AkeemIeong {
                                         op2=read.nextInt();
                                        if(op2==1){
                                             add(4);
+                                        }
+                                       if(op2==2){
+                                            imprimir(4);
                                         }
                                         break;
                                 }
@@ -125,22 +137,30 @@ public class Lab2P2_AkeemIeong {
                                     case 1:
                                         System.out.println("1<-Listar");
                                         op2=read.nextInt();
-                                        
+                                        if(op2==1){
+                                            imprimir(1);
+                                        }
                                         break;
                                     case 2:
                                         System.out.println("1<-Listar");
                                         op2=read.nextInt();
-                                        
+                                        if(op2==2){
+                                            imprimir(2);
+                                        }
                                         break;
                                     case 3:
                                         System.out.println("1<-Listar");
                                         op2=read.nextInt();
-                                        
+                                        if(op2==3){
+                                            imprimir(3);
+                                        }
                                         break;
                                     case 4:
                                         System.out.println("1<-Listar");
                                         op2=read.nextInt();
-                                        
+                                        if(op2==4){
+                                            imprimir(4);
+                                        }
                                         
                                         break;
                                 }
@@ -250,6 +270,33 @@ public class Lab2P2_AkeemIeong {
                 escrito.add(new Escritos(cantpal, epoca, gen, autor));
                 break;
                                         }
+    }
+    
+    public static void imprimir(int op){
+        switch(op){
+            case 1:
+                
+                for (Pinturas p: pinturas){
+                    System.out.println(Integer.toString(pinturas.indexOf(p)+1) + pinturas.get(op)) ;
+                }
+       
+                
+            case 2:
+                for (Esculturas p: escultura){
+                    System.out.println(Integer.toString(escultura.indexOf(p)+1) + escultura.get(op)) ;
+                }
+                break;
+            case 3:
+                for (Fotografias p: foto){
+                    System.out.println(Integer.toString(foto.indexOf(p)+1) + foto.get(op)) ;
+                }
+                break;
+            case 4:
+                for (Escritos p: escrito){
+                    System.out.println(Integer.toString(escrito.indexOf(p)+1) + escrito.get(op)) ;
+                }
+                break;
+        }
     }
     
 }
