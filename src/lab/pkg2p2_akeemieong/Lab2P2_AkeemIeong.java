@@ -80,7 +80,9 @@ public class Lab2P2_AkeemIeong {
                                         System.out.println("3<-Listar");
                                         System.out.println("4<-Modificar");
                                         op2=read.nextInt();
-                                        
+                                        if(op2==1){
+                                            add(1);
+                                        }
                                         break;
                                     case 2:
                                         System.out.println("1<-Crear");
@@ -88,7 +90,9 @@ public class Lab2P2_AkeemIeong {
                                         System.out.println("3<-Listar");
                                         System.out.println("4<-Modificar");
                                         op2=read.nextInt();
-                                        
+                                        if(op2==1){
+                                            add(2);
+                                        }
                                         break;
                                     case 3:
                                         System.out.println("1<-Crear");
@@ -96,7 +100,9 @@ public class Lab2P2_AkeemIeong {
                                         System.out.println("3<-Listar");
                                         System.out.println("4<-Modificar");
                                         op2=read.nextInt();
-                                        
+                                        if(op2==1){
+                                            add(3);
+                                        }
                                         break;
                                     case 4:
                                         System.out.println("1<-Crear");
@@ -104,7 +110,9 @@ public class Lab2P2_AkeemIeong {
                                         System.out.println("3<-Listar");
                                         System.out.println("4<-Modificar");
                                         op2=read.nextInt();
-                                        
+                                       if(op2==1){
+                                            add(4);
+                                        }
                                         break;
                                 }
                             }else{
@@ -145,7 +153,7 @@ public class Lab2P2_AkeemIeong {
         
         }while (opuser!=5);
     }
-    public static void menu2(int op){
+    public static void add(int op){
         switch(op){
             case 1:
                 System.out.println("Ingrese el nombre de la pintura: ");
@@ -221,7 +229,10 @@ public class Lab2P2_AkeemIeong {
                 System.out.println("Ingrese el color B/N: ");
                 String col=read.next();
                 String dimen=largo+"cm X "+alto+"cm";
-                
+                fotos.setColor(col);
+                fotos.setDimen(dimen);
+                fotos.setRes(res);
+                foto.add(new Fotografias(dimen, res, col) );
                 break;
             case 4:
                 System.out.println("Ingrese la cantidad de total de palabras: ");
@@ -232,6 +243,11 @@ public class Lab2P2_AkeemIeong {
                 String gen=read.next();
                 System.out.println("Ingrese el  nombre del autor: ");
                 String autor=read.next();
+                escri.setAutor(autor);
+                escri.setEpoca(epoca);
+                escri.setGenero(gen);
+                escri.setTotalpal(cantpal);
+                escrito.add(new Escritos(cantpal, epoca, gen, autor));
                 break;
                                         }
     }

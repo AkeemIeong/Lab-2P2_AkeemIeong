@@ -10,7 +10,7 @@ package lab.pkg2p2_akeemieong;
  */
 public class Escritos {
     private int totalpal;
-    private int epoca;
+    private String epoca;
     private String genero;
     private String autor;
 
@@ -18,7 +18,7 @@ public class Escritos {
         
     }
     
-    public Escritos(int totalpal, int epoca, String genero, String autor) {
+    public Escritos(int totalpal, String epoca, String genero, String autor) {
         this.totalpal = totalpal;
         this.epoca = epoca;
         this.genero = genero;
@@ -35,11 +35,11 @@ public class Escritos {
         this.totalpal = totalpal;
     }
 
-    public int getEpoca() {
+    public String getEpoca() {
         return epoca;
     }
 
-    public void setEpoca(int epoca) {
+    public void setEpoca(String epoca) {
         this.epoca = epoca;
     }
 
